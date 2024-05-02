@@ -58,7 +58,7 @@ export default function NewBiddingForm() {
 
     return (
         <div className="flex flex-col justify-center items-center h-auto  m-5">
-            <form onSubmit={handleNewBidding} className="bg-white p-8 rounded-lg shadow-md">
+            <form onSubmit={handleNewBidding} className="bg-white p-2 rounded-lg">
                 <div className="mb-4">
                     <label htmlFor="auctionId" className="block text-gray-700 font-bold mb-2">Auction ID:</label>
                     <input type="number" id="auctionId" name="auctionId" value={auctionId} onChange={(e) => setAuctionId(Number(e.target.value))}

@@ -19,6 +19,8 @@ import { Input } from "@/component/ui/input"
 interface Auction {
   id: number,
   name: string,
+  description: string,
+  imageUrl: string,
   startingPrice: number,
   minBiddingAmount: number,
 }
@@ -163,7 +165,8 @@ export default function App() {
           </ul>
         </div>
 
-        <p>Subscribe to the latest bidding status when you are offline</p> 
+        <p className="ml-4 font-bold">Please add a new Caller ID at Twilio to verify you phone number before subscription.</p>
+        <p>Subscribe to the latest bidding status when you are offline.</p> 
         <form onSubmit={handleSubscription}>
           <div className="flex w-full max-w-sm items-center space-x-2">
             <Input type="phone" placeholder="Phone Number" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} />
@@ -172,7 +175,7 @@ export default function App() {
         </form>
         
 
-        <div className="grid grid-cols-1 lg:grid-cols-3  items-baseline justify-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  items-baseline justify-center">
           {auctions.map(auction => (
             <div key={auction.id} className="flex flex-col items-center justify-center h-max">
               <AuctionCard auction={auction} />
@@ -180,6 +183,7 @@ export default function App() {
             </div>
           ))}
         </div>
+
 
       </div>
 

@@ -190,7 +190,7 @@ export default function App() {
       <div className="flex items-baseline justify-center overflow-auto ">
         <Popover>
           <PopoverTrigger className="m-5 bg-blue-800 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">New Auction Item</PopoverTrigger>
-          <PopoverContent className=""><NewAuctionForm /></PopoverContent>
+          <PopoverContent><NewAuctionForm /></PopoverContent>
         </Popover>
 
         <Popover>

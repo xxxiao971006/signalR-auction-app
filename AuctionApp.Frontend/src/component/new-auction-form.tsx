@@ -108,7 +108,7 @@ export default function NewAuctionForm() {
                     <input type="file" id="image" name="image" accept="image/*, video/*" onChange={handleFileChange}
                         className="w-full border bg-gray-300 text-blue-800 border-gray-300 rounded-md py-2 px-3 placeholder-gray-400 focus:outline-none focus:ring focus:border-blue-500 mb-2" />
                     {/* if file is image, show image preview, else if it is video show video preview    */}
-                    {file && file.type.startsWith("image/") && <img src={newAuctionImage} alt="Preview" className="w-full" />}      
+                    {file && file.type.startsWith("image/") && <img src={newAuctionImage} alt="Preview" className="w-1/2" />}      
                     {file && file.type.startsWith("video/") && <video src={newAuctionImage} controls className="w-full" />}
                 </div>
                 <div className="mb-2">

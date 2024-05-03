@@ -147,14 +147,14 @@ export default function App() {
   }
 
   return (
-    <div className="bg-gray-100">
+    <div className="bg-gray-100 min-h-screen ">
       <h1 className='bg-blue-900 text-white p-4 text-4xl text-center'>
         <p>Doctor Who's Auction</p>
         <p>{connection ? "👽" : "👿"}</p>
       </h1>
 
-      <div className="mb-8 flex flex-col items-center justify-center">
-        <h2 className="text-3xl font-bold my-4 text-center text-blue-900">Auctions</h2>
+      <div className="mb-8 mt-8 mx-4 flex flex-col items-center justify-center">
+        <h2 className="text-4xl font-bold my-4 text-center text-blue-900">Auctions</h2>
         <div className="mb-8 flex flex-col items-center justify-center ">
           <h3 className="text-xl font-bold my-4 text-gray-700">Bidding Rules</h3>
         <ul className="flex flex-col text-gray-500 ">
@@ -165,10 +165,10 @@ export default function App() {
           </ul>
         </div>
 
-        <p className="ml-4 font-bold">Please add a new Caller ID at Twilio to verify you phone number before subscription.</p>
-        <p>Subscribe to the latest bidding status when you are offline.</p> 
+        <p className="ml-4 font-bold mb-2">Please add a new Caller ID at Twilio to verify you phone number before subscription.</p>
+        <p className="ml-4">Subscribe to the latest bidding status when you are offline.</p> 
         <form onSubmit={handleSubscription}>
-          <div className="flex w-full max-w-sm items-center space-x-2">
+          <div className="flex w-full max-w-sm items-center space-x-2 mt-4">
             <Input type="phone" placeholder="Phone Number" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} />
             <Button type="submit">Subscribe</Button>
           </div>
@@ -187,10 +187,10 @@ export default function App() {
 
       </div>
 
-      <div className="flex items-baseline justify-center">
+      <div className="flex items-baseline justify-center overflow-auto ">
         <Popover>
           <PopoverTrigger className="m-5 bg-blue-800 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">New Auction Item</PopoverTrigger>
-          <PopoverContent><NewAuctionForm /></PopoverContent>
+          <PopoverContent className=""><NewAuctionForm /></PopoverContent>
         </Popover>
 
         <Popover>
